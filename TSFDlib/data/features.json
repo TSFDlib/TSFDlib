@@ -1,0 +1,378 @@
+{
+    "Statistical": {
+        "Skewness": {
+            "description": "Computes the skewness of a data set.",
+            "use": "no",
+            "cost": "3",
+			"imports": "from scipy.stats.stats import skew",
+            "function": "skew",
+            "source": "Python 2.7, Scipy Library",
+            "reference": "Zwillinger, D. and Kokoska, S. (2000). CRC Standard Probability and Statistics Tables and Formulae. Champman and Hall: New York. 2000. "
+        },
+        "Kurtosis": {
+            "description": "Computes the kurtosis (Pearson) of a data set.",
+            "use": "no",
+            "cost": "3",
+			"imports": "from scipy.stats.stats import kurtosis",
+            "function": "kurtosis",
+            "source": "Python 2.7, Scipy Library",
+            "reference": "Zwillinger, D. and Kokoska, S. (2000). CRC Standard Probability and Statistics Tables and Formulae. Champman and Hall: New York. 2000."
+        },
+        "Histogram": {
+            "description": "The grouping of the data into bins, plotting the number of members in each bin against the bin number.",
+            "use": "no",
+            "cost": "10",
+            "imports": "from TSFDlib import *",
+            "function": "hist_json",
+            "free parameters":{"nbins": [10, 20, 3],  "r": [1, 3, 2]},
+            "number of features": 3,
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        },
+        "Mean": {
+            "description": "Computes the arithmetic mean along the specified axis.",
+            "use": "no",
+            "cost": "1",
+			"imports": "from numpy import mean",
+            "function": "mean",
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        },
+        "Median": {
+            "description": "Computes the median along the specified axis.",
+            "use": "no",
+            "cost": "1",
+			"imports": "from numpy import median",
+            "function": "median",
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        },
+        "Max": {
+            "description": "Computes the maximum value along the specified axis.",
+            "use": "no",
+            "cost": "1",
+			"imports": "from numpy import max",
+            "function": "max",
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        },
+        "Min": {
+            "description": "Computes the minimum value along the specified axis.",
+            "use": "no",
+            "cost": "1",
+			"imports": "from numpy import min",
+            "function": "min",
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        },
+        "Variance": {
+            "description": "Computes the variance of a data set.",
+            "use": "no",
+            "cost": "1",
+			"imports": "from numpy import var",
+            "function": "var",
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        },
+        "Standard Deviation": {
+            "description": "Computes the standard deviation along the specified axis.",
+            "use": "no",
+            "cost": "1",
+			"imports": "from numpy import std",
+            "function": "std",
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        }
+    },
+    "Temporal": {
+        "Length": {
+            "description": "Computes the length of the signal.",
+            "use": "no",
+            "cost": "1",
+			"imports": "",
+            "function": "len",
+            "source": "",
+            "reference": ""
+        },
+        "Minimum peaks": {
+            "description": "Returns the number of minimum peaks of a data set.",
+            "use": "no",
+            "cost": "3",
+            "imports": "from TSFDlib import *",
+            "function": "minpeaks",
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        },
+        "Maximum peaks": {
+            "description": "Returns the number of maximum peaks of a data set.",
+            "use": "no",
+            "cost": "3",
+            "imports": "from TSFDlib import *",
+            "function": "maxpeaks",
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        },
+        "Centroid": {
+            "description": "Computes the centroid of a data set.",
+            "use": "no",
+            "cost": "10",
+            "imports": "from TSFDlib import *",
+            "function": "centroid",
+            "parameters": "FS",
+            "source": "Python 2.7, Scipy Library",
+            "reference": "G. Peeters, “A large set of audio features for sound description (similarity and classification) in the cuidado project”, 2004."
+        },
+        "Root mean square": {
+            "description": "The square root of the arithmetic mean (average) of the squares of the original values.",
+            "use": "no",
+            "cost": "2",
+            "imports": "from TSFDlib import *",
+            "function": "rms",
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        },
+        "Interquartile range": {
+            "description": "Computes the interquartile range for the provided sequence of values, a more robust estimation than the variance.",
+            "use": "no",
+            "cost": "3",
+            "imports": "from TSFDlib import *",
+            "function": "calc_iqr",
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        },
+		"Median absolute deviation": {
+            "description": "Computes the median absolute deviation for the provided sequence of values, a more robust estimation than the variance.",
+            "use": "no",
+            "cost":"3",
+            "imports": "from TSFDlib import *",
+            "function": "calc_mad",
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        },
+        "Mean absolute diff": {
+            "description": "Computes the mean of the absolute differences between two consequent values.",
+            "use": "no",
+            "cost": "3",
+            "imports": "from TSFDlib import *",
+            "function": "calc_madiff",
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        },
+        "Sum absolute diff": {
+            "description": "Computes the sum of the absolute differences between two consequent values.",
+            "use": "no",
+            "cost": "3",
+            "imports": "from TSFDlib import *",
+            "function": "calc_sadiff",
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        },
+        "Mean diff": {
+            "description": "Computes the mean of the differences between two consequent values.",
+            "use": "no",
+            "cost": "3",
+            "imports": "from TSFDlib import *",
+            "function": "calc_mdiff",
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        },
+        "Zero crossing rate": {
+            "description": "The zero-crossing rate is a measure of the number of time the signal value cross the zero axe.",
+            "use": "no",
+            "cost": "3",
+            "imports": "from TSFDlib import *",
+            "function": "zero_cross",
+            "source": "NovaInstrumentation",
+            "reference": "NovaInstrumentation"
+        },
+		"Correlation": {
+            "description":"Compute the Pearson Correlation coefficient along the specified axes.",
+            "use": "no",
+            "cost": "11",
+            "imports": "from TSFDlib import *",
+            "function": "correlation",
+            "number of features": 3,
+            "source": "Python 2.7, Scipy Library",
+            "reference": "www.statsoft.com/textbook/glosp.html#Pearson%20Correlation"
+		},
+		"Autocorrelation": {
+            "description": "Cross correlation of 1dimensional sequence.",
+            "use": "no",
+            "cost": "11",
+            "imports": "from TSFDlib import *",
+            "function": "autocorr",
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        }
+    },
+    "Spectral": {
+        "Maximum frequency": {
+            "description": "Compute the one-dimensional discrete Fourier Transform and with cumsum function find 95% of max frequency.",
+            "use": "no",
+            "cost": "25",
+            "imports": "from TSFDlib import *",
+            "function": "max_frequency",
+			"parameters": "FS",
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        },
+        "Median frequency": {
+            "description": "Compute the one-dimensional discrete Fourier Transform and with cumsum function find 50% of max frequency.",
+            "use": "no",
+            "cost": "25",
+            "imports": "from TSFDlib import *",
+            "function": "median_frequency",
+			"parameters": "FS",
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        },
+		"Fundamental frequency": {
+            "description": "Computes the fundamental frequency along the specified axis.For an harmonic signal,the fundamental frequency is the frequency so thats its integer multiple best explain the content of the signal spectrum.",
+			"use": "no",
+            "cost": "100",
+            "imports": "from TSFDlib import *",
+            "function": "fundamental_frequency",
+			"parameters":"FS",
+            "source": "NovaInstrumentation Library",
+            "reference": "NovaInstrumentation Library"
+        },
+		"Maximum power spectrum": {
+            "description": "Compute power spectrum density along the specified axes and return the maximum value.",
+            "use": "no",
+            "cost": "50",
+            "imports": "from TSFDlib import *",
+            "function": "power_spectrum",
+            "parameters":"FS",
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        },
+        "Total energy": {
+            "description": "Computes the total energy of a data set.",
+            "use": "no",
+            "cost": "40",
+            "imports": "from TSFDlib import *",
+            "function": "total_energy_",
+            "parameters": "FS",
+            "source": "Python 2.7, Scipy Library",
+			"reference": "G. Peeters, “A large set of audio features for sound description (similarity and classification) in the cuidado project”, 2004."
+        },
+        "Spectral centroid": {
+            "description": "Computes the spectral centroid of a data set.",
+            "use": "no",
+            "cost": "25",
+            "imports": "from TSFDlib import *",
+            "function": "spectral_centroid",
+            "parameters": "FS",
+            "source": "Python 2.7, Scipy Library",
+            "reference": "G. Peeters, “A large set of audio features for sound description (similarity and classification) in the cuidado project”, 2004."
+        },
+        "Spectral spread": {
+            "description": "Computes the spectral spread of a data set.",
+            "use": "no",
+            "cost": "45",
+            "imports": "from TSFDlib import *",
+            "function": "spectral_spread",
+            "parameters": "FS",
+            "source": "Python 2.7, Scipy Library",
+            "reference": "G. Peeters, “A large set of audio features for sound description (similarity and classification) in the cuidado project”, 2004."
+        },
+        "Spectral skewness": {
+            "description": "Computes the spectral skewness of a data set.",
+            "use": "no",
+            "cost": "45",
+            "imports": "from TSFDlib import *",
+            "function": "spectral_skewness",
+            "parameters": "FS",
+            "source": "Python 2.7, Scipy Library",
+            "reference": "G. Peeters, “A large set of audio features for sound description (similarity and classification) in the cuidado project”, 2004."
+        },
+		"Spectral kurtosis": {
+            "description": "Computes the spectral kurtosis of a data set.",
+            "use": "no",
+            "cost": "45",
+            "imports": "from TSFDlib import *",
+            "function": "spectral_kurtosis",
+            "parameters": "FS",
+            "source": "Python 2.7, Scipy Library",
+            "reference": "G. Peeters, “A large set of audio features for sound description (similarity and classification) in the cuidado project”, 2004."
+        },
+		"Spectral slope": {
+            "description": "Computes the spectral slope of a data set.",
+            "use": "no",
+            "cost": "45",
+            "imports": "from TSFDlib import *",
+            "function": "spectral_slope",
+            "parameters": "FS",
+            "source": "Python 2.7, Scipy Library",
+            "reference": "G. Peeters, “A large set of audio features for sound description (similarity and classification) in the cuidado project”, 2004."
+        },
+		"Spectral decrease": {
+            "description": "Computes the spectral decrease of a data set.",
+            "use": "no",
+            "cost": "45",
+            "imports": "from TSFDlib import *",
+            "function": "spectral_decrease",
+            "parameters": "FS",
+            "source": "Python 2.7, Scipy Library",
+            "reference": "G. Peeters, “A large set of audio features for sound description (similarity and classification) in the cuidado project”, 2004."
+        },
+        "Spectral roll-on": {
+            "description": "Computes the spectral roll-on of a dataset.",
+            "use": "no",
+            "cost": "45",
+            "imports": "from TSFDlib import *",
+            "function": "spectral_roll_on",
+            "parameters": "FS",
+            "source": "Python 2.7, Scipy Library",
+            "reference": "G. Peeters, “A large set of audio features for sound description (similarity and classification) in the cuidado project”, 2004."
+        },
+        "Spectral roll-off": {
+            "description": "Computes the spectral roll-off of a dataset.",
+            "use": "no",
+            "cost": "45",
+            "imports": "from TSFDlib import *",
+            "function": "spectral_roll_off",
+            "parameters": "FS",
+            "source": "Python 2.7, Scipy Library",
+            "reference": "G. Peeters, “A large set of audio features for sound description (similarity and classification) in the cuidado project”, 2004."
+        },
+        "Curve distance": {
+            "description": "Computes the curve distance of a dataset.",
+            "use": "no",
+            "cost": "45",
+            "imports": "from TSFDlib import *",
+            "function": "curve_distance",
+            "parameters": "FS",
+            "source": "Python 2.7, Scipy Library",
+            "reference": "Carina Figueira, 2015."
+        },
+		"Spectral variation": {
+            "description": "Computes the spectral variation of a data set.",
+            "use": "no",
+            "cost": "45",
+            "imports": "from TSFDlib import *",
+            "function": "spect_variation",
+            "parameters": "FS",
+            "source": "Python 2.7, Scipy Library",
+            "reference": "G. Peeters, “A large set of audio features for sound description (similarity and classification) in the cuidado project”, 2004."
+        },
+        "Linear regression": {
+            "description": "Computes the linear regression of a data set.",
+            "use": "no",
+            "cost": "30",
+            "imports": "from TSFDlib import *",
+            "function": "linear_regression",
+            "source": "Python 2.7, Numpy Library"
+        },
+        "Spectral maximum peaks": {
+            "description": "Returns the number of maximum peaks of a data set.",
+            "use": "no",
+            "cost": "45",
+            "imports": "from TSFDlib import *",
+            "function": "spectral_maxpeaks",
+            "parameters": "FS",
+            "source": "Python 2.7, Numpy Library",
+            "reference": "Python 2.7, Numpy Library"
+        }
+    }
+}
